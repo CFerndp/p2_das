@@ -1,0 +1,16 @@
+.cardContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: max-content;
+    max-width: 40rem;
+}
+
+.inputContainer {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    width: 100%;
+    justify-content: space-between;
+}
