@@ -4,8 +4,8 @@ import Button from "@/components/Button/Button";
 import React, { useState } from "react";
 import styles from "./styles.module.css";
 
-const SearchBar = ({ onSearch }) => {
-  const [search, setSearch] = useState("");
+const SearchBar = ({ onSearch, value }) => {
+  const [search, setSearch] = useState(value);
 
   const handleSearch = () => {
     onSearch(search.trim());

@@ -6,18 +6,18 @@ import styles from "./page.module.css";
 import SearchBar from "./(partials)/(SearchBar)/SearchBar";
 
 const Auctions = () => {
-  const { auctions, setSearch } = useSearchAuctions();
-  console.log({ auctions });
+  const { auctions, setSearch, value } = useSearchAuctions();
 
   return (
     <>
       <h2>Subastas disponibles</h2>
-      <SearchBar onSearch={setSearch} />
+      <SearchBar onSearch={setSearch} value={value} />
 
       <div className={styles.auctions}>
         {auctions.map((auction, i) => (
           <AuctionCard
             key={`auction-${i}-${auction.name}`}
+            id={i}
             name={auction.name}
             price={auction.price}
             open={auction.open}
