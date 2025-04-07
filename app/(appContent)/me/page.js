@@ -4,6 +4,7 @@ import Card from "@/components/Card/Card";
 import { useUserForm } from "./hooks";
 import styles from "./page.module.css";
 import Button from "@/components/Button/Button";
+import Link from "next/link";
 
 const UserME = () => {
   const { user, loading, handleSubmit } = useUserForm();
@@ -82,7 +83,9 @@ const UserME = () => {
           </div>
           <div className={styles.inputContainer}>
             <Button type="submit" label="Actualizar Perfil" />
-            <Button type="submit" label="Volver" />
+            <Link href="/auctions">
+              <Button type="submit" label="Volver" />
+            </Link>
           </div>
         </form>
       </Card>
