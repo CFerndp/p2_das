@@ -16,11 +16,11 @@ const Auctions = () => {
       <div className={styles.auctions}>
         {auctions.map((auction, i) => (
           <AuctionCard
-            key={`auction-${i}-${auction.name}`}
+            key={`auction-${i}-${auction.title}`}
             id={i}
-            name={auction.name}
+            name={auction.title}
             price={auction.price}
-            open={auction.open}
+            open
           />
         ))}
         {auctions.length === 0 && <p>No hay subastas disponibles</p>}
